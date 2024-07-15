@@ -162,3 +162,13 @@
   });
 
 })();
+
+document.addEventListener('scroll', () => {
+  const fixedObject = document.querySelector('.symbolic');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  
+  const opacity = Math.max(1 - (scrollTop / maxScroll), 0);
+
+  fixedObject.style.opacity = opacity;
+});
