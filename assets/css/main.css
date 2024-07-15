@@ -2484,12 +2484,13 @@ section,
   width: calc(100%/7);
   display: flex;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.1s linear;
 }
 
 .symbolic img{
   transform: translateY(20%);
   height: 10%;
-  max-width: calc(100% - 3px);
 }
 
 body{
